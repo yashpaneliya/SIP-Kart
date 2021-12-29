@@ -3,12 +3,12 @@ import { css } from "styled-components";
 const variables = css`
   :root {
     --orange: #eb7c19;
-    --back-light: #f8fffa;
+    --back-light: #ffffff;
     --font-light: #111111;
 
     --border-light: #eb7c19;
 
-    --nav-light: rgba(248, 255, 250, 0.85);
+    --nav-light: rgb(235,124,25,0.10);
     --nav-height: 100px;
 
     --fz-xxs: 12px;
@@ -22,6 +22,8 @@ const variables = css`
     --fz-heading: 32px;
     --fz-headingxlM: 45px;
     --fz-headingxl: 62px;
+    --fz-headingxxl: 70px;
+    --fz-headingxxxl: 80px;
 
     --font-sans: "Open Sans", -apple-system, system-ui, sans-serif;
 

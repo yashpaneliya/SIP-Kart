@@ -6,13 +6,15 @@ const Button = styled.button`
   border: 2px solid ${({ theme }) => theme.color};
   color: ${({ theme }) => theme.color};
   margin: 0.5em 1em;
-  padding: 0.25em 1em;
+  padding: 0.8em 2em;
+  cursor: pointer;
 
   ${(props) =>
     props.primary &&
     css`
       background: ${({ theme }) => theme.color};
       color: white;
+      letter-spacing: 1.1px;
     `}
 `;
 
@@ -57,6 +59,12 @@ const mixins = {
   flexRow: css`
     display: flex;
     flex-direction: row;
+    align-items: center;
+  `,
+
+  flexColumn: css`
+    display: flex;
+    flex-direction: column;
     align-items: center;
   `,
 };

@@ -1,15 +1,13 @@
 import styled from "styled-components";
-import { theme } from "../../styles";
+import { theme } from "../../styles"; 
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
 
-  position: fixed;
-  top: 0;
-  width: 100%;
+  width: 95%;
+  margin: auto;
   padding: 0px 40px;
   height: var(--nav-height);
-  background-color: ${({ theme }) => theme.nav};
 `;
 
 const StyledNav = styled.nav`
@@ -33,8 +31,8 @@ const StyledNav = styled.nav`
 
 const StyledInput = styled.div`
   ${({ theme }) => theme.mixins.flexBetween};
-
-  width: 40%;
+  border-radius: var(--border-radius);
+  width: 30%;
   background-color: white;
   height: 50%;
   color: ${({ theme }) => theme.text};
@@ -48,6 +46,7 @@ const Logo = (
 
 const AuthButton = styled.div`
   ${({ theme }) => theme.mixins.flexAround};
+  height: 50%;
 `;
 
 const NavBar = () => {

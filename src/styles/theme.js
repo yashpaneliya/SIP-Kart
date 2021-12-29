@@ -6,7 +6,7 @@ export const lightTheme = {
   text: `var(--font-light)`,
   nav: `var(--nav-light)`,
   border: `var(--border-light)`,
-
+  
   mixins,
 };
 
