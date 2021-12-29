@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import "./App.css";
-import NavBar from "./components/Navbar/navbar";
+import HomePage from "./containers/Homepage/Homepage";
 import { GlobalStyle } from "./styles";
 import { lightTheme } from "./styles/theme";
 
@@ -9,7 +9,7 @@ function App() {
     <>
       <ThemeProvider theme={lightTheme}>
         <GlobalStyle />
-        <NavBar />
+        <HomePage />
       </ThemeProvider>
     </>
   );
