@@ -7,13 +7,14 @@ ${variables};
 html{
     box-sizing: border-box;
     width: 100%;
+    height: 100%;
     scroll-behavior: smooth;
 }
 
 body{
     margin: 0;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     overflow-x: hidden;
 
     background-color: ${({ theme }) => theme.background};

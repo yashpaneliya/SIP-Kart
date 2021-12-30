@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   width: 95%;
   margin: auto;
   padding: 0px 40px;
-  height: var(--nav-height);
+  height: 10vh;
 `;
 
 const StyledNav = styled.nav`

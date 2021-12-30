@@ -6,7 +6,8 @@ import { theme } from "../../styles";
 const WrapperDiv = styled.div`
   ${({ theme }) => theme.mixins.flexRow};
   margin: auto;
-  height: 80%;
+  height: 90vh;
+  border: 1px solid red;
   width: 90%;
 `;
 
@@ -61,7 +62,7 @@ const InitialLanding = () => {
         <QuoteText primary>Invest & Enjoy.</QuoteText>
         <theme.mixins.Button primary>Start exploring</theme.mixins.Button>
       </ContentDiv>
-      <img src={LandingImage} alt="Landing Illustration" />
+      <img src={LandingImage} alt="Landing Illustration" height="55%" />
     </WrapperDiv>
   );
 };
