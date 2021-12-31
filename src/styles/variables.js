@@ -4,11 +4,12 @@ const variables = css`
   :root {
     --orange: #eb7c19;
     --back-light: #ffffff;
+    --shadow-light: grey;
     --font-light: #111111;
 
     --border-light: #eb7c19;
 
-    --nav-light: rgb(235,124,25,0.10);
+    --nav-light: rgb(235, 124, 25, 0.1);
     --nav-height: 100px;
 
     --fz-xxs: 12px;

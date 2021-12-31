@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SIPIcon from "../../static/icons/awesomeIcons";
+import SIPIcon from "../../../static/icons/awesomeIcons";
 const ItemDiv = styled.div`
   ${({ theme }) => theme.mixins.flexColumn};
 `;

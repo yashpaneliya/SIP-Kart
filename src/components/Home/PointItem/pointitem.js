@@ -1,6 +1,6 @@
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
-import SIPIcon from "../../static/icons/awesomeIcons";
+import SIPIcon from "../../../static/icons/awesomeIcons";
 
 const PointItemDiv = styled.div`
   ${({ theme }) => theme.mixins.flexRow};
