@@ -32,6 +32,21 @@ const CategoriesData = {
     title: "BETTER THAN FD",
     data: [],
   },
+  topcomp: {
+    icon: IconMap.companyIcon,
+    title: "TOP COMPANIES",
+    data: [],
+  },
+  min500: {
+    icon: IconMap.bankIcon,
+    title: "SIP WITH ₹500",
+    data: [],
+  },
+  sectorbets: {
+    icon: IconMap.balanceIcon,
+    title: "SECTOR BETS",
+    data: [],
+  },
 };
 
 export default CategoriesData;

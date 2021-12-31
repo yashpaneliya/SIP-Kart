@@ -56,6 +56,13 @@ const mixins = {
     align-items: center;
   `,
 
+  flexColAround: css`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  `,
+
   flexRow: css`
     display: flex;
     flex-direction: row;

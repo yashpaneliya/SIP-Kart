@@ -1,13 +1,14 @@
-import styled, { useTheme } from "styled-components";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import styled from "styled-components";
 import { css } from "styled-components";
 import CategoryItem from "../../components/CategoryItem/categoryItem";
 import CategoriesData from "../../data/categoryData";
+import SIPIcon from "../../static/icons/awesomeIcons";
 import mixins from "../../styles/mixins";
 
 const CategoriesDiv = styled.div`
   ${({ theme }) => theme.mixins.flexColumn};
 
-  border: 1px solid red;
   height: 100vh;
   margin-top: 30px;
   width: 100%;
@@ -66,13 +67,12 @@ const Categories = () => {
             <CategoryItem item={CategoriesData.fd} />
           </ItemsRow>
           <ItemsRow>
-            <CategoryItem item={CategoriesData.highReturn} />
-            <CategoryItem item={CategoriesData.taxSaving} />
-            <CategoryItem item={CategoriesData.fd} />
+            <CategoryItem item={CategoriesData.topcomp} />
+            <CategoryItem item={CategoriesData.min500} />
+            <CategoryItem item={CategoriesData.sectorbets} />
           </ItemsRow>
         </CategoryContainer>
-      <mixins.Button primary>Explore all SIPs</mixins.Button>
-
+        <mixins.Button primary>Explore all SIPs</mixins.Button>
       </ContentDiv>
     </CategoriesDiv>
   );

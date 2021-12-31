@@ -16,7 +16,11 @@ const SIPIcon = (props) => {
   console.log(props.icon);
   return (
     <IconWrapper>
-      <FontAwesomeIcon icon={props.icon} size="5x" color={theme.color} />
+      <FontAwesomeIcon
+        icon={props.icon}
+        size={props.size ?? "5x"}
+        color={theme.color}
+      />
     </IconWrapper>
   );
 };

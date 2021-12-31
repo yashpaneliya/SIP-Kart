@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import NavBar from "../../components/Navbar/navbar";
+import Advantages from "./Advantages";
 import Categories from "./Categories";
 import InitialLanding from "./InitialLanding";
 
@@ -15,6 +16,7 @@ const HomePage = () => {
       <NavBar />
       <InitialLanding />
       <Categories />
+      <Advantages />
     </HomePageDiv>
   );
 };

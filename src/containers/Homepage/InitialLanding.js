@@ -7,7 +7,6 @@ const WrapperDiv = styled.div`
   ${({ theme }) => theme.mixins.flexRow};
   margin: auto;
   height: 90vh;
-  border: 1px solid red;
   width: 90%;
 `;
 
