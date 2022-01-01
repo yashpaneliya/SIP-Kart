@@ -12,8 +12,6 @@ const IconWrapper = styled.div``;
 
 const SIPIcon = (props) => {
   const theme = useTheme();
-
-  console.log(props.icon);
   return (
     <IconWrapper>
       <FontAwesomeIcon
