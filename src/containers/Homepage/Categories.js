@@ -1,9 +1,7 @@
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import styled from "styled-components";
 import { css } from "styled-components";
-import CategoryItem from "../../components/CategoryItem/categoryItem";
+import CategoryItem from "../../components/Home/CategoryItem/categoryItem";
 import CategoriesData from "../../data/categoryData";
-import SIPIcon from "../../static/icons/awesomeIcons";
 import mixins from "../../styles/mixins";
 
 const CategoriesDiv = styled.div`

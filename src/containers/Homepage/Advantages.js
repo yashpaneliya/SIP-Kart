@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ProsVectorImage from "../../static/images/pros.png";
-import PointItem from "../../components/PointItem/pointitem";
+import PointItem from "../../components/Home/PointItem/pointitem";
 import mixins from "../../styles/mixins";
 
 const AdvantageDiv = styled.div`

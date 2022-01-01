@@ -18,11 +18,6 @@ const Button = styled.button`
     `}
 `;
 
-const Card = styled.div`
-  border-radius: 5px;
-  color: ${({ theme }) => theme.background};
-`;
-
 const Input = styled.input.attrs((props) => ({
   type: "text",
   size: props.size || "1em",
@@ -40,7 +35,6 @@ const Input = styled.input.attrs((props) => ({
 const mixins = {
   Button,
   Input,
-  Card,
 
   flexBetween: css`
     display: flex;

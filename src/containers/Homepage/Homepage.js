@@ -1,8 +1,11 @@
 import styled from "styled-components";
-import NavBar from "../../components/Navbar/navbar";
+import NavBar from "../../components/Home/Navbar/navbar";
 import Advantages from "./Advantages";
 import Categories from "./Categories";
+import FundPartners from "./FundPartners";
 import InitialLanding from "./InitialLanding";
+import MobileApp from "./MobilaApp";
+import Testimonials from "./Testimonials";
 
 const HomePageDiv = styled.div`
   ${({ theme }) => theme.mixins.flexColumn};
@@ -17,6 +20,9 @@ const HomePage = () => {
       <InitialLanding />
       <Categories />
       <Advantages />
+      <Testimonials />
+      <FundPartners />
+      <MobileApp />
     </HomePageDiv>
   );
 };
