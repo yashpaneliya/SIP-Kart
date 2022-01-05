@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { css } from "styled-components";
 import LandingImage from "../../static/images/landingImage.png";
 import { theme } from "../../styles";
+import { Link } from "react-router-dom";
 
 const WrapperDiv = styled.div`
   ${({ theme }) => theme.mixins.flexRow};
@@ -59,7 +60,9 @@ const InitialLanding = () => {
         </QuoteText>
         <QuoteText>Best platform to help you grow your money</QuoteText>
         <QuoteText primary>Invest & Enjoy.</QuoteText>
-        <theme.mixins.Button primary>Start exploring</theme.mixins.Button>
+        <Link to="/siplist">
+          <theme.mixins.Button primary>Start exploring</theme.mixins.Button>
+        </Link>
       </ContentDiv>
       <img src={LandingImage} alt="Landing Illustration" height="55%" />
     </WrapperDiv>

@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import { theme } from "../../../styles"; 
+import { theme } from "../../../styles";
+import { Link } from "react-router-dom";
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
-
+  background-color: ${({ theme }) => theme.nav};
   width: 95%;
   margin: auto;
   padding: 0px 40px;
@@ -39,9 +40,11 @@ const StyledInput = styled.div`
 `;
 
 const Logo = (
-  <div className="logo">
-    <span className="highlight">SIP</span>Kart
-  </div>
+  <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+    <div className="logo">
+      <span className="highlight">SIP</span>Kart
+    </div>
+  </Link>
 );
 
 const AuthButton = styled.div`
