@@ -61,17 +61,18 @@ const SubTitle = styled.span`
 `;
 
 const SIPListItem = ({ item }) => {
-  const riskFactors = ["Low", "Moderate", "High", "Very High"];
-
   return (
-    <Link to={`/siplist/${item.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+    <Link
+      to={`/siplist/${item.id}`}
+      style={{ textDecoration: "none", color: "inherit" }}
+    >
       <ListItemDiv key={item.id}>
         <FundLogo src={item.logo} alt={item.id} width="30px" />
         <FundDetails>
           <Definition>
             <Title>{item.name}</Title>
             <SubTitle>
-              {riskFactors[item.risk]} | {item.category}
+              {item.risk} | {item.category}
             </SubTitle>
           </Definition>
           <ReturnRates>
