@@ -6,6 +6,7 @@ const variables = css`
     --back-light: #ffffff;
     --shadow-light: grey;
     --font-light: #111111;
+    --shade-grey: lightgrey;
 
     --border-light: #eb7c19;
 

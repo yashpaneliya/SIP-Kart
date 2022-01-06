@@ -1,9 +1,11 @@
+const riskFactors = ["Low", "Moderate", "High", "Very High"];
+ 
 export default class SIP {
   constructor(json_obj) {
     this.id = json_obj.id;
     this.name = json_obj.name;
     this.category = json_obj.category;
-    this.risk = json_obj.risk;
+    this.risk = riskFactors[json_obj.risk];
     this.logo = json_obj.logo;
     this.oneM = json_obj["1M"];
     this.sixM = json_obj["6M"];
