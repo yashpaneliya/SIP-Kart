@@ -3,6 +3,7 @@ import { css } from "styled-components";
 const variables = css`
   :root {
     --orange: #eb7c19;
+    --shade-orange: rgb(255, 194, 140,0.4);
     --back-light: #ffffff;
     --shadow-light: grey;
     --font-light: #111111;
