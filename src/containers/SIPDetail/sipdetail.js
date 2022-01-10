@@ -1,9 +1,11 @@
 /* eslint-disable no-unused-vars */
 import { useContext } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation, Link } from "react-router-dom";
 import styled from "styled-components";
+import EquitySectorAllocation from "../../components/SIPDetails/equitysectorallocation";
 import FundDetails from "../../components/SIPDetails/fundetails";
 import SIPHeaderDetails from "../../components/SIPDetails/headerdetails";
+import ReturnCalculator from "../../components/SIPDetails/returncalculator";
 import SIPGraph from "../../components/SIPDetails/sipgraph";
 import { SIPListContext } from "../SIPListPage/store/siplistcontext";
 
@@ -19,12 +21,11 @@ const SIPDetailsMainDiv = styled.div`
   margin: auto;
 `;
 
-const Routes = styled.div`
+const RoutesSection = styled.div`
   height: 3rem;
-  width: 100%;
   ${({ theme }) => theme.mixins.flexRow};
   align-items: flex-start;
-  width: 80%;
+  width: 70%;
   margin: 1rem auto;
 `;
 
@@ -46,7 +47,18 @@ const SIPDetail = () => {
 
   return (
     <SIPDetailOuterDiv>
-      <Routes>Routes...</Routes>
+      <RoutesSection>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          Home{" > "}
+        </Link>
+        <Link
+          to="/siplist"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          {"  "}SIPs{"  > "}
+        </Link>
+        {sip.name}
+      </RoutesSection>
       <SIPDetailsMainDiv>
         <DetailsSection>
           <SIPHeaderDetails
@@ -68,6 +80,13 @@ const SIPDetail = () => {
             minSIP={sip.minSIP}
             fundSize={sip.fundSize}
           />
+          <ReturnCalculator
+            sixM={sip.sixM}
+            oneY={sip.oneY}
+            threeY={sip.threeY}
+            minSIP={sip.minSIP}
+          />
+          <EquitySectorAllocation data={sip.equitySectorAllocation} />
         </DetailsSection>
         <OrderSection></OrderSection>
       </SIPDetailsMainDiv>
