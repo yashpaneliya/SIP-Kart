@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import { useParams, useLocation, Link } from "react-router-dom";
 import styled from "styled-components";
+import AddToCart from "../../components/SIPDetails/addtocart";
 import EquitySectorAllocation from "../../components/SIPDetails/equitysectorallocation";
 import FundDetails from "../../components/SIPDetails/fundetails";
 import SIPHeaderDetails from "../../components/SIPDetails/headerdetails";
@@ -30,13 +31,12 @@ const RoutesSection = styled.div`
 `;
 
 const DetailsSection = styled.div`
-  width: 70%;
+  width: 67%;
   margin-right: 2rem;
 `;
 
 const OrderSection = styled.div`
-  width: 30%;
-  border: 1px solid blue;
+  width: 33%;
 `;
 
 const SIPDetail = () => {
@@ -88,7 +88,9 @@ const SIPDetail = () => {
           />
           <EquitySectorAllocation data={sip.equitySectorAllocation} />
         </DetailsSection>
-        <OrderSection></OrderSection>
+        <OrderSection>
+          <AddToCart />
+        </OrderSection>
       </SIPDetailsMainDiv>
     </SIPDetailOuterDiv>
   );
