@@ -52,7 +52,7 @@ const AuthButton = styled.div`
   height: 50%;
 `;
 
-const NavBar = () => {
+const NavBar = (props) => {
   return (
     <StyledHeader>
       <StyledNav>
@@ -61,8 +61,8 @@ const NavBar = () => {
           <theme.mixins.Input placeholder="Search SIPs" />
         </StyledInput>
         <AuthButton>
-          <theme.mixins.Button>Sign up</theme.mixins.Button>
-          <theme.mixins.Button primary>Login</theme.mixins.Button>
+          <theme.mixins.Button onClick={props.showModal} >Sign up</theme.mixins.Button>
+          <theme.mixins.Button onClick={props.showModal} primary>Login</theme.mixins.Button>
         </AuthButton>
       </StyledNav>
     </StyledHeader>
