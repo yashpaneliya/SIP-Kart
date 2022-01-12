@@ -61,7 +61,7 @@ const Testimonials = () => {
           </SubHeading>
           <CardRow>
             {TestimonialsData.map((data) => (
-              <TestimonialCard data={data} key={data.name}/>
+              <TestimonialCard data={data} key={data.name} />
             ))}
           </CardRow>
         </Content>

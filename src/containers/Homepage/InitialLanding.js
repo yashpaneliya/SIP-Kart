@@ -8,12 +8,12 @@ const WrapperDiv = styled.div`
   ${({ theme }) => theme.mixins.flexRow};
   margin: auto;
   height: 90vh;
-  width: 90%;
+  width: 100%;
 `;
 
 const ContentDiv = styled.div`
   ${({ theme }) => theme.mixins.flexColumn};
-  width: 100%;
+  width: 90%;
   margin: auto;
 `;
 
@@ -33,6 +33,10 @@ const QuoteText = styled.div`
       font-size: var(--fz-heading);
       margin: 10px 0px;
     `};
+
+  @media only screen and (max-width: 700px) {
+    text-align: center;
+  }
 `;
 
 const Heading = styled.h1`
@@ -45,6 +49,16 @@ const Heading = styled.h1`
       color: ${({ theme }) => theme.color};
       margin: 0px 10px;
     `};
+
+  @media only screen and (max-width: 700px) {
+    font-size: var(--fz-headingxl);
+  }
+`;
+
+const ImageDiv = styled.div`
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const InitialLanding = () => {
@@ -64,7 +78,9 @@ const InitialLanding = () => {
           <theme.mixins.Button primary>Start exploring</theme.mixins.Button>
         </Link>
       </ContentDiv>
-      <img src={LandingImage} alt="Landing Illustration" height="55%" />
+      <ImageDiv>
+        <img src={LandingImage} alt="Landing Illustration" height="55%" />
+      </ImageDiv>
     </WrapperDiv>
   );
 };

@@ -21,15 +21,31 @@ const ProsDiv = styled.div`
   ${({ theme }) => theme.mixins.flexColAround};
   width: 45%;
   text-align: left;
+
+  @media only screen and (max-width:700px){
+    width:100%;
+  }
 `;
 
 const Points = styled.div``;
+
+const ImageDiv = styled.div`
+  @media only screen and (min-width: 700px) {
+    display: inline;
+  }
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+`;
 
 const Advantages = () => {
   return (
     <AdvantageDiv>
       <ContentDiv>
-        <img src={ProsVectorImage} alt="Pros vector" width={"45%"} />
+        <ImageDiv>
+          <img src={ProsVectorImage} alt="Pros vector" width={"45%"} />
+        </ImageDiv>
         <ProsDiv>
           <h1>Take a step forward with Ease and Confidence</h1>
           <Points>

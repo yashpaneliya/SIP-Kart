@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { theme } from "../../../styles";
 import { Link } from "react-router-dom";
+import SIPIcon from "../../../static/icons/awesomeIcons";
+import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -37,6 +39,10 @@ const StyledInput = styled.div`
   background-color: white;
   height: 50%;
   color: ${({ theme }) => theme.text};
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const Logo = (
@@ -50,6 +56,20 @@ const Logo = (
 const AuthButton = styled.div`
   ${({ theme }) => theme.mixins.flexAround};
   height: 50%;
+
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+`;
+
+const HamBurger = styled.div`
+@media only screen and (min-width: 700px) {
+  display: none;
+}
+  
+  @media only screen and (max-width: 700px) {
+    display: visible;
+  }
 `;
 
 const NavBar = (props) => {
@@ -60,9 +80,16 @@ const NavBar = (props) => {
         <StyledInput>
           <theme.mixins.Input placeholder="Search SIPs" />
         </StyledInput>
+        <HamBurger>
+          <SIPIcon icon={faHamburger} size="2x" color="black" />
+        </HamBurger>
         <AuthButton>
-          <theme.mixins.Button onClick={props.showModal} >Sign up</theme.mixins.Button>
-          <theme.mixins.Button onClick={props.showModal} primary>Login</theme.mixins.Button>
+          <theme.mixins.Button onClick={props.showModal}>
+            Sign up
+          </theme.mixins.Button>
+          <theme.mixins.Button onClick={props.showModal} primary>
+            Login
+          </theme.mixins.Button>
         </AuthButton>
       </StyledNav>
     </StyledHeader>

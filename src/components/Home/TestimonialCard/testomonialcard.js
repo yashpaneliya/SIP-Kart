@@ -9,6 +9,10 @@ const OuterDiv = styled.div`
   align-items: flex-start;
   margin: 2rem;
   width: 20vw;
+
+  @media only screen and (max-width:500px){
+    width:100%;
+  }
 `;
 
 const ImageSection = styled.div`
@@ -37,7 +41,6 @@ const Review = styled.span`
 `;
 
 const TestimonialCard = (props) => {
-  console.log(props.data.stars);
   return (
     <Card>
       <OuterDiv>

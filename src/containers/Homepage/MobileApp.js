@@ -10,6 +10,10 @@ const MobileAppDiv = styled.div`
   width: 100%;
   height: 50vh;
   padding: 2rem;
+
+  @media only screen and (max-width: 700px) {
+    height: 90vh;
+  }
 `;
 
 const Box = styled.div`
@@ -19,14 +23,24 @@ const Box = styled.div`
   width: 70%;
   height: 100%;
   border-radius: 20px;
+
+  @media only screen and (max-width: 700px) {
+    ${({ theme }) => theme.mixins.flexColumn};
+    width: 90%;
+  }
 `;
 
 const CTA = styled.div`
   ${({ theme }) => theme.mixins.flexColAround};
-  width: 50%;
+  width: 90%;
   color: white;
   margin-left: 5rem;
-  align-items:flex-start;
+  align-items: flex-start;
+
+  @media only screen and (max-width: 700px) {
+    margin-top:4rem;
+    margin-left:0;
+  }
 `;
 
 const Image = styled.div`
@@ -35,11 +49,17 @@ const Image = styled.div`
   justify-content: center;
   width: 50%;
   height: 100%;
+
+  @media only screen and (max-width:700px){
+    align-items:flex-start;
+    width:40%;
+    height:70%;
+    margin-top:2rem;
+  }
 `;
 
 const DownloadLinks = styled.div`
   ${({ theme }) => theme.mixins.flexRow};
-
 `;
 
 const MobileApp = () => {
